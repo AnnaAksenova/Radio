@@ -18,7 +18,7 @@ public class RadioAdvancedTest {
         RadioAdvanced radio = new RadioAdvanced();
         radio.setMaxRadioNumber(9);
         radio.setMinRadioNumber(0);
-        radio.setCurrentRadioNumber(9);
+        radio.setCurrentRadioNumber(0);
 
         radio.setCurrentRadioNumber(10);
 
@@ -32,9 +32,9 @@ public class RadioAdvancedTest {
         RadioAdvanced radio = new RadioAdvanced();
         radio.setMaxRadioNumber(9);
         radio.setMinRadioNumber(0);
-        radio.setCurrentRadioNumber(0);
-
         radio.setCurrentRadioNumber(9);
+
+        radio.setCurrentRadioNumber(10);
 
         int expected = 9;
         int actual = radio.getCurrentRadioNumber();
@@ -150,7 +150,7 @@ public class RadioAdvancedTest {
         RadioAdvanced radio = new RadioAdvanced();
         radio.setCurrentRadioNumber(6);
 
-        radio.setMaxRadioNumber(9);
+        radio.setMaxRadioNumber(10);
 
         int expected = 9;
         int actual = radio.getMaxRadioNumber();
@@ -161,7 +161,7 @@ public class RadioAdvancedTest {
         RadioAdvanced radio = new RadioAdvanced();
         radio.setCurrentRadioNumber(4);
 
-        radio.setMinRadioNumber(0);
+        radio.setMinRadioNumber(-1);
 
         int expected = 0;
         int actual = radio.getMinRadioNumber();

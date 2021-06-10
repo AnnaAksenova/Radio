@@ -49,11 +49,11 @@ public class RadioAdvanced {
         }
 
         public int setCurrentRadioNumber(int currentRadioNumber) {
-            if (currentRadioNumber > 9) {
-                return 0;
+            if (currentRadioNumber > maxRadioNumber) {
+                return currentRadioNumber;
             }
-            if (currentRadioNumber < 0) {
-                return 9;
+            if (currentRadioNumber < minRadioNumber) {
+                return currentRadioNumber;
             }
             this.currentRadioNumber = currentRadioNumber;
             return currentRadioNumber;
@@ -86,12 +86,11 @@ public class RadioAdvanced {
         if (currentVolumeLevel < minVolumeLevel) {
             return;
         }
-            if (currentVolumeLevel < 10) {
-                currentVolumeLevel = currentVolumeLevel + 1;
-        }
-        if (currentVolumeLevel > 10) {
-            currentVolumeLevel = maxVolumeLevel;
-        }
+            //if (currentVolumeLevel < 10) {
+             //   currentVolumeLevel = currentVolumeLevel + 1;
+        //}
+      //  if (currentVolumeLevel > 10) {
+      //      currentVolumeLevel = maxVolumeLevel;
         this.currentVolumeLevel = currentVolumeLevel;
     }
            public boolean isOn() {
