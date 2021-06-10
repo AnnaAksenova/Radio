@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/RadioAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/RadioAdvanced.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/RadioAdvancedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/RadioAdvancedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/RadioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/RadioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +34,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="JUnit.RadioAdvancedTest">
+  <component name="RunManager" selected="JUnit.RadioTest.shouldThrowNPE">
     <configuration name="RadioAdvancedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smart-house" />
       <extension name="coverage">
@@ -49,7 +50,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioAdvancedTest.reduceVolumeLessMin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioAdvancedTest.installLastStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smart-house" />
       <extension name="coverage">
         <pattern>
@@ -59,13 +60,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.RadioAdvancedTest" />
-      <option name="METHOD_NAME" value="reduceVolumeLessMin" />
+      <option name="METHOD_NAME" value="installLastStation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioAdvancedTest.returnNineStationAfterMin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioAdvancedTest.setCurrentRadioNumberLessMin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smart-house" />
       <extension name="coverage">
         <pattern>
@@ -75,13 +76,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.RadioAdvancedTest" />
-      <option name="METHOD_NAME" value="returnNineStationAfterMin" />
+      <option name="METHOD_NAME" value="setCurrentRadioNumberLessMin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioAdvancedTest.returnZeroStationAfterMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smart-house" />
       <extension name="coverage">
         <pattern>
@@ -90,14 +91,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.RadioAdvancedTest" />
-      <option name="METHOD_NAME" value="returnZeroStationAfterMax" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.RadioTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioAdvancedTest.setCurrentRadioNumberMoreMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTest.shouldThrowNPE" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smart-house" />
       <extension name="coverage">
         <pattern>
@@ -106,8 +106,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.RadioAdvancedTest" />
-      <option name="METHOD_NAME" value="setCurrentRadioNumberMoreMax" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.RadioTest" />
+      <option name="METHOD_NAME" value="shouldThrowNPE" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RadioTest.shouldThrowNPE" />
+        <item itemvalue="JUnit.RadioTest" />
         <item itemvalue="JUnit.RadioAdvancedTest" />
-        <item itemvalue="JUnit.RadioAdvancedTest.returnZeroStationAfterMax" />
-        <item itemvalue="JUnit.RadioAdvancedTest.returnNineStationAfterMin" />
-        <item itemvalue="JUnit.RadioAdvancedTest.setCurrentRadioNumberMoreMax" />
-        <item itemvalue="JUnit.RadioAdvancedTest.reduceVolumeLessMin" />
+        <item itemvalue="JUnit.RadioAdvancedTest.setCurrentRadioNumberLessMin" />
+        <item itemvalue="JUnit.RadioAdvancedTest.installLastStation" />
       </list>
     </recent_temporary>
   </component>

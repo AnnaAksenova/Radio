@@ -10,7 +10,7 @@ public class RadioAdvanced {
    private int currentVolumeLevel;
    private int maxVolumeLevel = 10;
    private int minVolumeLevel = 0;
-   private boolean on;
+
 
         public String getName() {
             return name;
@@ -93,12 +93,6 @@ public class RadioAdvanced {
       //      currentVolumeLevel = maxVolumeLevel;
         this.currentVolumeLevel = currentVolumeLevel;
     }
-           public boolean isOn() {
-            return on;
-        }
 
-        public void setOn(boolean on) {
-            this.on = on;
-        }
     }
 
