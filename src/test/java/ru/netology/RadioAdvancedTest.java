@@ -20,7 +20,7 @@ public class RadioAdvancedTest {
         radio.setMinRadioNumber(0);
         radio.setCurrentRadioNumber(9);
 
-        radio.setCurrentRadioNumber(0);
+        radio.setCurrentRadioNumber(10);
 
         int expected = 0;
         int actual = radio.getCurrentRadioNumber();
@@ -54,6 +54,7 @@ public class RadioAdvancedTest {
         int actual = radio.getCurrentRadioNumber();
         assertEquals(expected, actual);
     }
+
     @Test
     public void switchingOnPreviousStation() {
         RadioAdvanced radio = new RadioAdvanced();
@@ -68,19 +69,33 @@ public class RadioAdvancedTest {
         assertEquals(expected, actual);
     }
     @Test
+    public void setCurrentRadioNumberMoreMax(){
+        RadioAdvanced radio = new RadioAdvanced();
+        radio.setMaxRadioNumber(9);
+        radio.setMinRadioNumber(0);
+        radio.setCurrentRadioNumber(0);
+
+        radio.setCurrentRadioNumber(10);
+
+        int expected = 0;
+        int actual = radio.getCurrentRadioNumber();
+        assertEquals(expected, actual);
+    }
+    @Test
     public void increaseVolumeMoreMax() {
         RadioAdvanced radio = new RadioAdvanced();
         radio.setMaxVolumeLevel(10);
         radio.setMinVolumeLevel(0);
-        radio.setCurrentVolumeLevel(9);
+        radio.setCurrentVolumeLevel(10);
 
-        radio.setCurrentVolumeLevel(9);
+        radio.setCurrentVolumeLevel(11);
 
         int expected = 10;
         int actual = radio.getCurrentVolumeLevel();
         assertEquals(expected, actual);
 
     }
+
     @Test
     public void reduceVolumeLessMin() {
         RadioAdvanced radio = new RadioAdvanced();
@@ -88,13 +103,14 @@ public class RadioAdvancedTest {
         radio.setMinVolumeLevel(0);
         radio.setCurrentVolumeLevel(0);
 
-        radio.setCurrentVolumeLevel(10);
+        radio.setCurrentVolumeLevel(-1);
 
-        int expected = 10;
+        int expected = 0;
         int actual = radio.getCurrentVolumeLevel();
         assertEquals(expected, actual);
 
     }
+
     @Test
     public void choiceWantStation() {
         RadioAdvanced radio = new RadioAdvanced();
@@ -102,7 +118,65 @@ public class RadioAdvancedTest {
 
         assertNull(radio.getWantStation());
         radio.setWantStation("6");
-     assertEquals(expected, radio.getWantStation());
-    }
+        assertEquals(expected, radio.getWantStation());
     }
 
+    @Test
+    public void setMaxVolume() {
+        RadioAdvanced radio = new RadioAdvanced();
+        radio.setCurrentVolumeLevel(6);
+
+        radio.setMaxVolumeLevel(10);
+
+        int expected = 10;
+        int actual = radio.getMaxVolumeLevel();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setMinVolume() {
+        RadioAdvanced radio = new RadioAdvanced();
+        radio.setCurrentVolumeLevel(5);
+
+        radio.setMinVolumeLevel(0);
+
+        int expected = 0;
+        int actual = radio.getMinVolumeLevel();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void installLastStation() {
+        RadioAdvanced radio = new RadioAdvanced();
+        radio.setCurrentRadioNumber(6);
+
+        radio.setMaxRadioNumber(9);
+
+        int expected = 9;
+        int actual = radio.getMaxRadioNumber();
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void installFirstStation() {
+        RadioAdvanced radio = new RadioAdvanced();
+        radio.setCurrentRadioNumber(4);
+
+        radio.setMinRadioNumber(0);
+
+        int expected = 0;
+        int actual = radio.getMinRadioNumber();
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldInitFieldToZeroValues() {
+        Radio radio = new Radio();
+        assertNull(radio.name);
+        assertEquals(9, radio.maxRadioNumber);
+        assertEquals(0, radio.minRadioNumber);
+        assertEquals(0, radio.currentRadioNumber);
+        assertEquals(0, radio.minVolumeLevel);
+        assertEquals(10, radio.maxVolumeLevel);
+        assertEquals(0, radio.currentVolumeLevel);
+        assertFalse(radio.on);
+    }
+}

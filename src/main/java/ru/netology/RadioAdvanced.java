@@ -49,11 +49,11 @@ public class RadioAdvanced {
         }
 
         public int setCurrentRadioNumber(int currentRadioNumber) {
-            if (currentRadioNumber > maxRadioNumber) {
-                return minRadioNumber;
+            if (currentRadioNumber > 9) {
+                return 0;
             }
-            if (currentRadioNumber < minRadioNumber) {
-                return maxRadioNumber;
+            if (currentRadioNumber < 0) {
+                return 9;
             }
             this.currentRadioNumber = currentRadioNumber;
             return currentRadioNumber;
